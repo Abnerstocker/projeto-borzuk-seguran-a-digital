@@ -1,1 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segurança Digital | Navegue com Proteção</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- Cabeçalho e Navegação -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <span class="shield-icon">🛡️</span> <strong>Segurança Digital</strong>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">☰</button>
+      <nav id="navMenu">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#ameacas">Ameaças</a></li>
+          <li><a href="#protecao">Como se Proteger</a></li>
+          <li><a href="#jogos">Jogos Educativos</a></li>
+          <li><a href="#checklist">Checklist</a></li>
+          <li><a href="#referencias">Referências</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Seção Início / Hero -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <h1>Conscientização e Proteção na Era Digital</h1>
+        <p>Aprenda a identificar ameaças, proteger suas contas e adotar hábitos mais seguros na internet.</p>
+        <a href="#protecao" class="btn-primary">Comece a se proteger</a>
+      </div>
+    </section>
+
+    <!-- O que é Segurança Digital -->
+    <section class="container info-section">
+      <h2>O que é Segurança Digital?</h2>
+      <p>Segurança digital é o conjunto de práticas, ferramentas e cuidados adotados para proteger computadores, redes, dispositivos e dados pessoais contra acessos não autorizados, roubos e ataques cibernéticos.</p>
+    </section>
+
+    <!-- Seção Ameaças Digitais -->
+    <section id="ameacas" class="bg-light">
+      <div class="container">
+        <h2>Principais Ameaças Digitais</h2>
+        <div class="grid">
+          <div class="card">
+            <span class="card-icon">🎣</span>
+            <h3>Phishing</h3>
+            <p>Mensagens e e-mails falsos que se passam por empresas confiáveis para roubar senhas e dados bancários.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🦠</span>
+            <h3>Malware</h3>
+            <p>Programas maliciosos (como vírus e ransomware) projetados para danificar dispositivos ou sequestrar dados.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">👤</span>
+            <h3>Perfis Falsos</h3>
+            <p>Contas clonadas ou fakes criadas em redes sociais para enganar amigos e familiares solicitando dinheiro.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🔑</span>
+            <h3>Roubo de Contas</h3>
+            <p>Invasão de perfis por uso de senhas fracas ou compartilhadas, gerando perda do acesso pessoal.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">💳</span>
+            <h3>Golpes Financeiros</h3>
+            <p>Fraudes via Pix, boletos falsos e anúncios enganosos que induzem pagamentos indevidos.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🎭</span>
+            <h3>Engenharia Social</h3>
+            <p>Técnicas de manipulação psicológica para fazer com que o usuário entregue informações confidenciais voluntariamente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Como se Proteger -->
+    <section id="protecao" class="container">
+      <h2>Como se Proteger</h2>
+      <div class="grid">
+        <div class="card card-border">
+          <h3>🔒 Cuidados com Senhas</h3>
+          <p>Crie senhas longas com letras, números e símbolos. Nunca use a mesma senha para múltiplos serviços.</p>
+        </div>
+        <div class="card card-border">
+          <h3>📱 Autenticação em 2 Fatores (2FA)</h3>
+          <p>Ative a verificação em duas etapas em todos os seus aplicativos. Ela exige um código extra para acessar a conta.</p>
+        </div>
+        <div class="card card-border">
+          <h3>⚠️ Links e Mensagens</h3>
+          <p>Desconfie de ofertas irrecusáveis, links encurtados ou urgência excessiva em mensagens do WhatsApp e e-mails.</p>
+        </div>
+        <div class="card card-border">
+          <h3>🔄 Atualizações e Backups</h3>
+          <p>Mantenha o sistema operacional e aplicativos atualizados. Faça cópias de segurança (backups) dos seus arquivos importantes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Jogos Educativos -->
+    <section id="jogos" class="bg-light">
+      <div class="container">
+        <h2>Jogos Interativos de Segurança</h2>
+        
+        <!-- Abas dos Jogos -->
+        <div class="game-tabs">
+          <button class="tab-btn active" id="tabQuiz">Jogo 1: Quiz de Conhecimento</button>
+          <button class="tab-btn" id="tabPhishing">Jogo 2: Detective de Phishing</button>
+        </div>
+
+        <!-- JOGO 1: QUIZ -->
+        <div id="gameQuiz" class="game-content">
+          <div class="quiz-container">
+            <div id="quizBox">
+              <div id="questionTitle" class="quiz-question">Carregando pergunta...</div>
+              <div id="quizOptions" class="quiz-options"></div>
+              <button id="btnNext" class="btn-primary hidden">Próxima Pergunta</button>
+            </div>
+            <div id="quizResult" class="hidden">
+              <h3>Resultado do Quiz:</h3>
+              <p id="scoreText"></p>
+              <button id="btnRestart" class="btn-primary">Refazer Quiz</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- JOGO 2: DETECTIVE DE PHISHING -->
+        <div id="gamePhishing" class="game-content hidden">
+          <div class="quiz-container">
+            <h3>Detecte se a mensagem é Legítima ou Golpe:</h3>
+            <div id="phishingBox">
+              <div id="phishingCard" class="phishing-card">
+                <div id="phishingSender" class="phishing-sender">Remetente: ...</div>
+                <div id="phishingMessage" class="phishing-message">Mensagem...</div>
+              </div>
+              <div class="phishing-actions">
+                <button id="btnReal" class="btn-action btn-success">✅ É Legítimo</button>
+                <button id="btnFake" class="btn-action btn-danger">🚨 É Golpe / Phishing</button>
+              </div>
+              <p id="phishingFeedback" class="feedback-text"></p>
+              <button id="btnNextPhishing" class="btn-primary hidden">Próxima Mensagem</button>
+            </div>
+            <div id="phishingResult" class="hidden">
+              <h3>Resultado do Detective:</h3>
+              <p id="phishingScoreText"></p>
+              <button id="btnRestartPhishing" class="btn-primary">Jogar Novamente</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Seção Checklist de Segurança -->
+    <section id="checklist" class="container">
+      <h2>Checklist de Hábitos Seguros</h2>
+      <p>Marque as ações que você já pratica diariamente:</p>
+      
+      <div class="progress-bar-bg">
+        <div id="progressBar" class="progress-bar-fill"></div>
+      </div>
+      <p id="progressText">0% dos hábitos adotados</p>
+
+      <ul class="checklist-items">
+        <li>
+          <label><input type="checkbox" class="chk-item"> Uso senhas fortes e diferentes para cada conta</label>
+        </li>
+        <li>
+          <label><input type="checkbox" class="chk-item"> Ativei a autenticação em duas etapas (2FA) nas minhas redes e e-mails</label>
+        </li>
+        <li>
+          <label><input type="checkbox" class="chk-item"> Verifico o remetente antes de clicar em links de mensagens ou e-mails</label>
+        </li>
+        <li>
+          <label><input type="checkbox" class="chk-item"> Mantenho meu sistema operacional e aplicativos sempre atualizados</label>
+        </li>
+        <li>
+          <label><input type="checkbox" class="chk-item"> Faço cópias de segurança (backups) periódicas dos meus arquivos</label>
+        </li>
+        <li>
+          <label><input type="checkbox" class="chk-item"> Evito realizar compras ou acessar bancos usando redes Wi-Fi públicas</label>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Seção Referências -->
+    <section id="referencias" class="bg-light">
+      <div class="container">
+        <h2>Referências</h2>
+        <ul class="ref-list">
+          <li><strong>CERT.br:</strong> Cartilha de Segurança para Internet</li>
+          <li><strong>OWASP:</strong> OWASP Top 10 Web Application Security Risks</li>
+          <li><strong>W3C / WAI:</strong> Diretrizes de Acessibilidade para Conteúdo Web</li>
+          <li><strong>MDN Web Docs:</strong> Documentação de HTML, CSS e JavaScript</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container footer-content">
+      <p class="quote">“Pense antes de clicar, verifique antes de compartilhar e proteja antes de confiar.”</p>
+      <p class="copyright">&copy; Projeto Segurança Digital — Desenvolvido com HTML, CSS e JavaScript puro.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
